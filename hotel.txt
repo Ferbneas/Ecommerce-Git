@@ -1,0 +1,4 @@
+Hotel List
+Vegetarian
+Non vegetarian
+
