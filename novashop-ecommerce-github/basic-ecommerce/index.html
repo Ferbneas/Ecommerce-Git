@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaShop - modern static ecommerce storefront">
+  <title>NovaShop | Modern Ecommerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#">Nova<span>Shop</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#products">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">Cart <b id="cartCount">0</b></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="container search-inner">
+        <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">NEW SEASON • 2026</p>
+          <h1>Good design.<br><span>Better living.</span></h1>
+          <p class="hero-text">Curated essentials for your desk, home and everyday life — thoughtfully designed and easy to love.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#products">Shop collection</a>
+            <a class="text-link" href="#categories">Explore categories →</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ Free shipping over $50</span>
+            <span>✓ Easy 30-day returns</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-product">
+            <span class="sale-pill">BESTSELLER</span>
+            <div class="product-orb">◉</div>
+            <div class="hero-product-info">
+              <small>Featured</small>
+              <h3>Studio Headphones</h3>
+              <strong>$129</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="categories section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">BROWSE</p><h2>Shop by category</h2></div>
+        </div>
+        <div class="category-grid">
+          <button class="category-card" data-category="Tech"><span>◫</span><b>Tech</b><small>12 products</small></button>
+          <button class="category-card" data-category="Desk"><span>▤</span><b>Desk</b><small>8 products</small></button>
+          <button class="category-card" data-category="Home"><span>⌂</span><b>Home</b><small>15 products</small></button>
+          <button class="category-card" data-category="Lifestyle"><span>✦</span><b>Lifestyle</b><small>10 products</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">OUR PICKS</p><h2>Popular products</h2></div>
+          <div class="filters">
+            <button class="filter active" data-filter="All">All</button>
+            <button class="filter" data-filter="Tech">Tech</button>
+            <button class="filter" data-filter="Desk">Desk</button>
+            <button class="filter" data-filter="Home">Home</button>
+            <button class="filter" data-filter="Lifestyle">Lifestyle</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="newsletter section">
+      <div class="container newsletter-box">
+        <div><p class="eyebrow">STAY IN THE LOOP</p><h2>Fresh finds, zero spam.</h2><p>Get occasional product drops, design inspiration and exclusive offers.</p></div>
+        <form id="newsletterForm"><input type="email" required placeholder="Your email address"><button class="btn primary">Subscribe</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="#">Nova<span>Shop</span></a><p>Modern essentials for modern living.</p></div>
+      <div><b>Shop</b><a href="#products">All products</a><a href="#categories">Categories</a></div>
+      <div><b>Help</b><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
+    </div>
+    <div class="container copyright">© 2026 NovaShop. Demo ecommerce website.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div><span>Total</span><strong id="cartTotal">$0.00</strong></div><button class="btn primary checkout" id="checkoutBtn">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
