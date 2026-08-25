@@ -35,3 +35,6 @@ For the best development experience, use VS Code with the **Live Server** extens
 Edit the `products` array in `script.js` to add your own products. Replace the demo product symbols with real images by changing the product-card markup in `renderProducts()`.
 
 > This is a frontend-only demo. Checkout, authentication, inventory, orders and payments require a backend/service.
+
+# GITHUB REPOSITORY URL is below
+https://github.com/Ferbneas/Ecommerce-Git.git
